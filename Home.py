@@ -70,8 +70,8 @@ if selected == "Hemsida":
         <p> Sverige ska ha <span style="color:#ff5050;"><b>100 %</b></span> förnybar elproduktion år 
         <span style="color:#ff5050;"><b>2040 </b></span>men ... <br>
         elproduktionen från solceller utgör <span style="color:#ff5050;"><b>en låg</b></span> andel</p><br>
-        <h5> Hur ser Sveriges produktion av el ut i dagsläget?</h5>
-        <h5> Vad visar statistiken om nätanslutna solcellsanläggningar?</h5>
+        <h6> Hur ser Sveriges produktion av el ut i dagsläget?</h6>
+        <h6> Vad visar statistiken om nätanslutna solcellsanläggningar?</h6>
         """, unsafe_allow_html=True)
 
 
