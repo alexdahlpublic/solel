@@ -234,20 +234,12 @@ if selected == "Solkraft":
     st.write("Källa: [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/energi/tillforsel-och-anvandning-av-energi/arlig-energistatistik-el-gas-och-fjarrvarme/), [Energimyndigheten](http://www.energimyndigheten.se/statistik/solstatistik/)")
 
     # show and download the data
-    col7, col8, col9 = st.columns(3)
+    col7, col8 = st.columns(2)
 
     with col7:
        visa_data_2 = st.checkbox("📋 Visa data", key="2")
 
     with col8:
-        sol_house = load_lottiefile("assets/sol_house.json")
-        st_lottie(
-            sol_house,
-            width=200,
-            height=200
-        )
-
-    with col9:
 
          # load csv
         with open ("data/sol_total.csv", encoding="utf-8") as csv_file_b:
@@ -285,8 +277,8 @@ if selected == "Karta":
     df_sol = pd.read_csv("data/sol.csv", dtype=dtype_dic)
     
     # selectbox
-    col10, col11 = st.columns(2)
-    with col10:
+    col9, col10 = st.columns(2)
+    with col9:
         amne = st.selectbox(
             label="Kartans ämne: ", 
             options= [
@@ -304,7 +296,7 @@ if selected == "Karta":
         # Replace the strings returned by the multiselectbox by the dataframe in the dict
         df_amne = kartan_amne[amne]
 
-    with col11:
+    with col10:
         ar= st.selectbox(
             label="År: ", 
             options=df_amne["År"].unique(),
@@ -342,12 +334,12 @@ if selected == "Karta":
     
     st.markdown("#")
     # show and download the data
-    col12, col13, col14 = st.columns(3)
+    col11, col12 = st.columns(2)
 
-    with col12:
+    with col11:
        visa_data_3 = st.checkbox("📋 Visa data", key="3")
 
-    with col13:
+    with col12:
 
          # load csv
         with open ("data/sol.csv", encoding="utf-8") as csv_file_c:
