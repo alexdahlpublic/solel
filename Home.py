@@ -125,7 +125,7 @@ if selected == "Solkraft":
         )
 
     fig.update_traces(
-            textfont_size= 15,
+            textfont_size= 14,
             textfont_color='#ffffff',
             marker=dict(line=dict(color='#ffffff', width=0.6))
         )
