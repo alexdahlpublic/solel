@@ -97,9 +97,10 @@ if selected == "Solkraft":
         )
 
 
-    st.write(f"""Sveriges produktion av el består i dagsläget främst av vattenkraft, kärnkraft, vindkraft
-    samt kraftvärme. I 2021 utgjorde solkraften en liten andel, mindre än 1 % av Sveriges elproduktion. Däremot
-    producerade solkraften 1.1 TWh, en ökning på 40 procent jämfört med 2020. 
+    st.write(f"""Sveriges produktion av el består i dagsläget främst av vattenkraft, kärnkraft, vindkraft samt 
+    kraftvärme. I 2021 utgjorde solkraften en liten andel, mindre än 1 % av Sveriges elproduktion. Däremot producerade
+    solkraften 1.1 TWh, en ökning på 40 procent jämfört med 2020. 
+   
     """)
     
     # metrics
@@ -177,7 +178,7 @@ if selected == "Solkraft":
 
     st.write(f"""
     I Sverige har ökningen av solcellsanläggningar gått snabbt de senaste åren.
-    Vid utgången av 2020 fanns ca 66 000 nätanslutna anläggningar i Sverige,vilket
+    Vid utgången av 2020 fanns ca 66 000 nätanslutna anläggningar i Sverige, vilket
     är en ökning med 56 000 anläggningar sedan 2016. Följaktligen har också den installerade effekten ökat lika mycket.  
        
     """
