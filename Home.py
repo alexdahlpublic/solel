@@ -131,7 +131,7 @@ if selected == "Solkraft":
         )
 
     fig.update_layout(
-           legend=dict(font=dict(size=20)) 
+           legend=dict(font=dict(size=12)) 
         )
     st.plotly_chart(fig, use_container_width=True)
    
@@ -205,32 +205,32 @@ if selected == "Solkraft":
                 "Solcellsanläggningar, antal Totalt",
             ]
         )
-        chart_amne= {
-            "Installerad effekt (MW) Totalt": df_sol_total[["År", "IE", "Länd"]],
-            "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Länd"]],
-            "Solcellsanläggningar, antal Totalt": df_sol_total[["År", "SCA", "Länd"]],
-        }
+    chart_amne= {
+        "Installerad effekt (MW) Totalt": df_sol_total[["År", "IE", "Länd"]],
+        "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Länd"]],
+        "Solcellsanläggningar, antal Totalt": df_sol_total[["År", "SCA", "Länd"]],
+    }
 
-        # Replace the strings returned by the multiselectbox by the dataframe in the dict
-        df_amne_c = chart_amne[amne_c]
-    
-        # store each column in a seperate variable
-        länd= df_amne_c["Länd"]
-        värde = df_amne_c.iloc[:,1]
-        date = df_amne_c["År"]
+    # Replace the strings returned by the multiselectbox by the dataframe in the dict
+    df_amne_c = chart_amne[amne_c]
 
-        #  create animated bar chart and store figure as fig_total
-        fig_total = px.bar(
-            df_amne_c,
-            x= länd,
-            y= värde,
-            animation_frame=date,
-            animation_group=länd,
-            range_y= [0, värde.max()],
-            labels= {"y" : "Värde", "Länd": " "},
-        )
+    # store each column in a seperate variable
+    länd= df_amne_c["Länd"]
+    värde = df_amne_c.iloc[:,1]
+    date = df_amne_c["År"]
 
-        st.plotly_chart(fig_total, use_container_width=True)
+    #  create animated bar chart and store figure as fig_total
+    fig_total = px.bar(
+        df_amne_c,
+        x= länd,
+        y= värde,
+        animation_frame=date,
+        animation_group=länd,
+        range_y= [0, värde.max()],
+        labels= {"y" : "Värde", "Länd": " "},
+    )
+
+    st.plotly_chart(fig_total, use_container_width=True)
 
     # source
     st.write("Källa: [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/energi/tillforsel-och-anvandning-av-energi/arlig-energistatistik-el-gas-och-fjarrvarme/), [Energimyndigheten](http://www.energimyndigheten.se/statistik/solstatistik/)")
