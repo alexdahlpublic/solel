@@ -100,8 +100,8 @@ if selected == "Solkraft":
         )
 
 
-    st.write(f"""Sveriges produktion av el består i dagsläget främst av vattenkraft, kärnkraft, vindkraft   
-    samt kraftvärme. I 2021 utgjorde solkraften en liten andel, mindre än 1 % av Sveriges elproduktion. Däremot 
+    st.write(f"""Sveriges produktion av el består i dagsläget främst av vattenkraft, kärnkraft, vindkraft
+    samt kraftvärme. I 2021 utgjorde solkraften en liten andel, mindre än 1 % av Sveriges elproduktion. Däremot
     producerade solkraften 1.1 TWh, en ökning på 40 procent jämfört med 2020. 
     """)
 
