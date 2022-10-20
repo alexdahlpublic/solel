@@ -127,11 +127,11 @@ if selected == "Solkraft":
     fig.update_traces(
             textfont_size= 14,
             textfont_color='#ffffff',
-            marker=dict(line=dict(color='#ffffff', width=1))
+            marker=dict(line=dict(color='#ffffff', width=0.8))
         )
 
     fig.update_layout(
-           legend=dict(font=dict(size=12)) 
+           legend=dict(font=dict(size=11)) 
         )
     st.plotly_chart(fig, use_container_width=True)
    
