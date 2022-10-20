@@ -115,25 +115,27 @@ if selected == "Solkraft":
     # store the columns in seperate variables
     values= df_till["2021"]
     names= df_till["Tillförsel"]
-
-    # create pie chart
-    fig= px.pie(
+    
+    cola, colb = st.columns(2)
+    with cola:
+        # create pie chart
+        fig= px.pie(
         data_frame= df_till, 
         values= values,
         names=names,
         title="Andel av elproduktionen 2021, TWh "
-    )
+        )
 
-    fig.update_traces(
-        textfont_size= 20,
-        textfont_color='#ffffff',
-        marker=dict(line=dict(color='#ffffff', width=1))
-    )
+        fig.update_traces(
+            textfont_size= 20,
+            textfont_color='#ffffff',
+            marker=dict(line=dict(color='#ffffff', width=1))
+        )
 
-    fig.update_layout(
-       legend=dict(font=dict(size=20)) 
-    )
-    st.write (fig)
+        fig.update_layout(
+           legend=dict(font=dict(size=20)) 
+        )
+        st.write (fig)
 
     # source
     st.write("Källa: [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/energi/tillforsel-och-anvandning-av-energi/arlig-energistatistik-el-gas-och-fjarrvarme/), [Energimyndigheten](http://www.energimyndigheten.se/statistik/solstatistik/)")
