@@ -104,6 +104,13 @@ if selected == "Solkraft":
     samt kraftvärme. I 2021 utgjorde solkraften en liten andel, mindre än 1 % av Sveriges elproduktion. Däremot
     producerade solkraften 1.1 TWh, en ökning på 40 procent jämfört med 2020. 
     """)
+    
+    # metrics
+    st.metric(
+            label="Solkraften", 
+            value="1.1 TWh", 
+            delta="40 %"
+        )
 
     # load csv
     with open ("data/tillförsel.csv", encoding="utf-8") as csv_file_a:
@@ -139,26 +146,18 @@ if selected == "Solkraft":
     st.write("Källa: [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/energi/tillforsel-och-anvandning-av-energi/arlig-energistatistik-el-gas-och-fjarrvarme/), [Energimyndigheten](http://www.energimyndigheten.se/statistik/solstatistik/)")
 
     # show and download the data
-    col3, col4, col5 = st.columns(3)
+    col3, col4 = st.columns(2)
 
     with col3:
        visa_data_1= st.checkbox("📋 Visa data", key="1")
 
     with col4:
-        st.download_button(
-        label="⬇️ Ladda ner data",
-        data= CSV,
-        file_name="tillförsel.csv"
-        )
-
-    with col5:
          st.metric(
             label="Solkraften", 
             value="1.1 TWh", 
             delta="40 %"
         )
-        
-    
+            
     if visa_data_1:
         st.write(df_till)
 
@@ -167,11 +166,11 @@ if selected == "Solkraft":
 
     # Part 2
 
-    col6, col7 = st.columns(2)
-    with col6:
+    col5, col6 = st.columns(2)
+    with col5:
         st.header("Solceller i Sverige")
 
-    with col7:
+    with col6:
         solar_panel = load_lottiefile("assets/solar_panel.json")
         st_lottie(
             solar_panel,
@@ -196,16 +195,14 @@ if selected == "Solkraft":
     df_sol_total = pd.read_csv("data/sol_total.csv", dtype=dtype_dic_total, encoding="utf-8")
 
     # selectbox
-    col8, col9 = st.columns(2)
-    with col8:
-        amne_c = st.selectbox(
-            label="Charts ämne: ", 
-            options= [
-                "Installerad effekt (MW) Totalt",
-                "Installerad effekt per capita (Watt per person)",
-                "Solcellsanläggningar, antal Totalt",
-            ]
-        )
+    amne_c = st.selectbox(
+        label="Charts ämne: ", 
+        options= [
+            "Installerad effekt (MW) Totalt",
+            "Installerad effekt per capita (Watt per person)",
+            "Solcellsanläggningar, antal Totalt",
+        ]
+    )
     chart_amne= {
         "Installerad effekt (MW) Totalt": df_sol_total[["År", "IE", "Länd"]],
         "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Länd"]],
@@ -237,12 +234,12 @@ if selected == "Solkraft":
     st.write("Källa: [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/energi/tillforsel-och-anvandning-av-energi/arlig-energistatistik-el-gas-och-fjarrvarme/), [Energimyndigheten](http://www.energimyndigheten.se/statistik/solstatistik/)")
 
     # show and download the data
-    col10, col11, col12 = st.columns(3)
+    col7, col8, col9 = st.columns(3)
 
-    with col10:
+    with col7:
        visa_data_2 = st.checkbox("📋 Visa data", key="2")
 
-    with col11:
+    with col8:
         sol_house = load_lottiefile("assets/sol_house.json")
         st_lottie(
             sol_house,
@@ -250,7 +247,7 @@ if selected == "Solkraft":
             height=200
         )
 
-    with col12:
+    with col9:
 
          # load csv
         with open ("data/sol_total.csv", encoding="utf-8") as csv_file_b:
@@ -288,8 +285,8 @@ if selected == "Karta":
     df_sol = pd.read_csv("data/sol.csv", dtype=dtype_dic)
     
     # selectbox
-    col13, col14 = st.columns(2)
-    with col13:
+    col10, col11 = st.columns(2)
+    with col10:
         amne = st.selectbox(
             label="Kartans ämne: ", 
             options= [
@@ -307,7 +304,7 @@ if selected == "Karta":
         # Replace the strings returned by the multiselectbox by the dataframe in the dict
         df_amne = kartan_amne[amne]
 
-    with col14:
+    with col11:
         ar= st.selectbox(
             label="År: ", 
             options=df_amne["År"].unique(),
@@ -345,12 +342,12 @@ if selected == "Karta":
     
     st.markdown("#")
     # show and download the data
-    col15, col16, col17 = st.columns(3)
+    col12, col13, col14 = st.columns(3)
 
-    with col15:
+    with col12:
        visa_data_3 = st.checkbox("📋 Visa data", key="3")
 
-    with col17:
+    with col13:
 
          # load csv
         with open ("data/sol.csv", encoding="utf-8") as csv_file_c:
