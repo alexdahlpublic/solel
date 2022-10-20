@@ -12,9 +12,8 @@ from streamlit_lottie import st_lottie
 
 # page config
 st.set_page_config(
-    page_title="",
-    page_icon="",
-    layout="wide"
+    page_title="Solceller",
+    page_icon="🌅",
 )
 
 # Load CSS
