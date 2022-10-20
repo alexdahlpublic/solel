@@ -73,10 +73,7 @@ if selected == "Hemsida":
         <h6> Hur ser Sveriges produktion av el ut i dagsläget?</h6>
         <h6> Vad visar statistiken om nätanslutna solcellsanläggningar?</h6>
         """, unsafe_allow_html=True)
-
-
     
-
 
 if selected == "Solkraft":
 
@@ -179,10 +176,11 @@ if selected == "Solkraft":
         )
 
     st.write(f"""
-    I Sverige har ökningen av solcellsanläggningar gått snabbt de senaste åren.  
+    I Sverige har ökningen av solcellsanläggningar gått snabbt de senaste åren.
     Vid utgången av 2020 fanns ca 66 000 nätanslutna anläggningar i Sverige,   
     vilket är en ökning med 56 000 anläggningar sedan 2016. Följaktligen har också  
-    den installerade effekten ökat lika mycket.  
+    den installerade effekten ökat lika mycket.   
+     
     """
     )
     
