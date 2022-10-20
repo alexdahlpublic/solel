@@ -152,10 +152,10 @@ if selected == "Solkraft":
        visa_data_1= st.checkbox("📋 Visa data", key="1")
 
     with col4:
-         st.metric(
-            label="Solkraften", 
-            value="1.1 TWh", 
-            delta="40 %"
+         st.download_button(
+            label="⬇️ Ladda ner data",
+            data= CSV,
+            file_name="tillförsel.csv"
         )
             
     if visa_data_1:
