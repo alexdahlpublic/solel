@@ -277,30 +277,29 @@ if selected == "Karta":
     df_sol = pd.read_csv("data/sol.csv", dtype=dtype_dic)
     
     # selectbox
-    col9, col10 = st.columns(2)
-    with col9:
-        amne = st.selectbox(
-            label="Kartans ämne: ", 
-            options= [
-                "Installerad effekt (MW) Totalt",
-                "Installerad effekt per capita (Watt per person)",
-                "Solcellsanläggningar, antal Totalt",
-            ]
-        )
-        kartan_amne= {
-             "Installerad effekt (MW) Totalt": df_sol[["Län", "År", "IE"]],
-            "Installerad effekt per capita (Watt per person)": df_sol[["Län", "År", "IEPC"]],
-            "Solcellsanläggningar, antal Totalt": df_sol[["Län", "År", "SCA"]],
-        }
 
-        # Replace the strings returned by the multiselectbox by the dataframe in the dict
-        df_amne = kartan_amne[amne]
+    amne = st.selectbox(
+        label="Kartans ämne: ", 
+        options= [
+            "Installerad effekt (MW) Totalt",
+            "Installerad effekt per capita (Watt per person)",
+            "Solcellsanläggningar, antal Totalt",
+        ]
+    )
+    kartan_amne= {
+         "Installerad effekt (MW) Totalt": df_sol[["Län", "År", "IE"]],
+        "Installerad effekt per capita (Watt per person)": df_sol[["Län", "År", "IEPC"]],
+        "Solcellsanläggningar, antal Totalt": df_sol[["Län", "År", "SCA"]],
+    }
 
-    with col10:
-        ar= st.selectbox(
-            label="År: ", 
-            options=df_amne["År"].unique(),
-        )
+    # Replace the strings returned by the multiselectbox by the dataframe in the dict
+    df_amne = kartan_amne[amne]
+
+    
+    ar= st.selectbox(
+        label="År: ", 
+        options=df_amne["År"].unique(),
+    )
     
     # select year
     df_selection = df_amne.query(
@@ -334,12 +333,12 @@ if selected == "Karta":
     
     st.markdown("#")
     # show and download the data
-    col11, col12 = st.columns(2)
+    col9, col10 = st.columns(2)
 
-    with col11:
+    with col9:
        visa_data_3 = st.checkbox("📋 Visa data", key="3")
 
-    with col12:
+    with col10:
 
          # load csv
         with open ("data/sol.csv", encoding="utf-8") as csv_file_c:
