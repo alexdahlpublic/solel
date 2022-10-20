@@ -1,6 +1,5 @@
 streamlit
 streamlit_option_menu
 streamlit_lottie
-plotly.express 
-plotly.graph_objects 
+plotly
 pandas 
