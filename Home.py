@@ -131,7 +131,7 @@ if selected == "Solkraft":
         )
 
     fig.update_layout(
-           legend=dict(font=dict(size=13)) 
+           legend=dict(font=dict(size=12)) 
         )
     st.plotly_chart(fig, use_container_width=True)
    
