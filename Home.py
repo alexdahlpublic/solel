@@ -34,7 +34,7 @@ with st.sidebar:
     st.sidebar.title("Om")
     st.sidebar.info(
         """
-        This [web app](https://github.com/dahlalex/Solceller) is made by [Alex Dahl](https://github.com/dahlalex). You can follow me on social media:
+        This [web app](https://github.com/dahlalex/Solceller) is made by [Alex Dahl](https://dahlalex.github.io/). You can follow me on social media:
             [GitHub](https://github.com/dahlalex) | [LinkedIn](https://www.linkedin.com/in/dahlalex/).
 
         The app is made as an assignment for [Mobila System och GIT](https://www.ocellus.se/mobila-system-och-git).
