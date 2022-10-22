@@ -6,6 +6,10 @@
 footer{visibility: hidden;}
 header{visibility: hidden;}
 
+p {
+    font-size: 0.93rem;
+}
+
 div.st-al {
 color: #b8d4ed;
 }
