@@ -75,7 +75,7 @@ if selected == "Hem":
         """, unsafe_allow_html=True)
     
 
-if selected == "Solkraft":
+if selected == "Statistik":
 
     # Part 1
 
@@ -105,7 +105,7 @@ if selected == "Solkraft":
     
     # metrics
     st.metric(
-            label="Statistik", 
+            label="Solkraft", 
             value="1.1 TWh", 
             delta="40 %"
         )
