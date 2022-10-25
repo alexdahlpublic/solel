@@ -147,7 +147,7 @@ if selected == "Statistik":
     col3, col4 = st.columns(2)
 
     with col3:
-       visa_data_1= st.checkbox("📋 Visa data", key="1")
+       visa_data_1= st.checkbox("📋 Visa mer data", key="1")
 
     with col4:
          st.download_button(
