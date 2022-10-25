@@ -202,16 +202,16 @@ if selected == "Statistik":
         ]
     )
     chart_amne= {
-        "Installerad effekt (MW)": df_sol_total[["År", "IE", "Länd"]],
-        "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Länd"]],
-        "Solcellsanläggningar (Antal)": df_sol_total[["År", "SCA", "Länd"]],
+        "Installerad effekt (MW)": df_sol_total[["År", "IE", "Land"]],
+        "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Land"]],
+        "Solcellsanläggningar (Antal)": df_sol_total[["År", "SCA", "Land"]],
     }
 
     # Replace the strings returned by the multiselectbox by the dataframe in the dict
     df_amne_c = chart_amne[amne_c]
 
     # store each column in a seperate variable
-    länd= df_amne_c["Länd"]
+    länd= df_amne_c["Land"]
     värde = df_amne_c.iloc[:,1]
     date = df_amne_c["År"]
 
@@ -223,7 +223,7 @@ if selected == "Statistik":
         animation_frame=date,
         animation_group=länd,
         range_y= [0, värde.max()],
-        labels= {"y" : "Värde", "Länd": " "},
+        labels= {"y" : "Värde", "Land": " "},
     )
 
     st.plotly_chart(fig_total, use_container_width=True)
