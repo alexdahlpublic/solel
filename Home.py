@@ -43,7 +43,7 @@ with st.sidebar:
     """
     )
 
-if selected == "Hemsida":
+if selected == "Hem":
     # background for Hemsida
     def get_base64(bin_file):
             with open(bin_file, 'rb') as f:
