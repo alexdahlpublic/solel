@@ -98,7 +98,7 @@ if selected == "Statistik":
 
 
     st.write(f"""Sveriges produktion av el består i dagsläget främst av vattenkraft, kärnkraft, vindkraft   
-    samt värmekraft. År 2021 utgjorde solkraften mindre än 1 % av Sveriges elproduktion. Även om det i dagsläget  
+    samt värmekraft. År 2021 utgjorde solkraften mindre än 1 % av Sveriges elproduktion. Även om det i dagsläget
     är en mycket liten andel så är ökningen jämfört med 2020 anmärkningsvärd, ca 40%. 
    
     """)
