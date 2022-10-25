@@ -250,7 +250,7 @@ if selected == "Solkraft":
         )
     
     if visa_data_2:
-        st.write("""
+        st.text("""
         IE: Installerad effekt (MW) Totalt  
         IEPC: Installerad effect per capita  
         SCA: Solcellsanläggningar, antal Totalt
