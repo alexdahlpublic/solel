@@ -355,6 +355,12 @@ if selected == "Karta":
         )
     
     if visa_data_3:
+        st.text("""
+        IE: Installerad effekt (MW) Totalt  
+        IEPC: Installerad effect per capita  
+        SCA: Solcellsanläggningar, antal Totalt
+        """
+        )
         st.write(df_sol)
 
 
