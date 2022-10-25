@@ -26,7 +26,7 @@ with open("styles/main.css") as f:
 with st.sidebar:
     selected = option_menu(
     menu_title=None, 
-    options=["Hem", "Solkraft", "Karta"], 
+    options=["Hem", "Statistik", "Karta"], 
     icons=['house', 'sun', "map"], 
     menu_icon="cast", 
     default_index=0, 
@@ -105,7 +105,7 @@ if selected == "Solkraft":
     
     # metrics
     st.metric(
-            label="Solkraften", 
+            label="Statistik", 
             value="1.1 TWh", 
             delta="40 %"
         )
