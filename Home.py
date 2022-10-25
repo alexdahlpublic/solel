@@ -196,15 +196,15 @@ if selected == "Statistik":
     amne_c = st.selectbox(
         label="Charts ämne: ", 
         options= [
-            "Installerad effekt (MW) Totalt",
+            "Installerad effekt (MW)",
             "Installerad effekt per capita (Watt per person)",
-            "Solcellsanläggningar, antal Totalt",
+            "Solcellsanläggningar (Antal)",
         ]
     )
     chart_amne= {
-        "Installerad effekt (MW) Totalt": df_sol_total[["År", "IE", "Länd"]],
+        "Installerad effekt (MW)": df_sol_total[["År", "IE", "Länd"]],
         "Installerad effekt per capita (Watt per person)": df_sol_total[["År", "IEPC", "Länd"]],
-        "Solcellsanläggningar, antal Totalt": df_sol_total[["År", "SCA", "Länd"]],
+        "Solcellsanläggningar (Antal)": df_sol_total[["År", "SCA", "Länd"]],
     }
 
     # Replace the strings returned by the multiselectbox by the dataframe in the dict
@@ -251,9 +251,9 @@ if selected == "Statistik":
     
     if visa_data_2:
         st.text("""
-        IE: Installerad effekt (MW) Totalt  
-        IEPC: Installerad effect per capita  
-        SCA: Solcellsanläggningar, antal Totalt
+        IE: Installerad effekt (MW)  
+        IEPC: Installerad effect per capita (Watt per person)
+        SCA: Solcellsanläggningar, antal 
         """
         )
         st.write(df_sol_total)
@@ -285,15 +285,15 @@ if selected == "Karta":
     amne = st.selectbox(
         label="Kartans ämne: ", 
         options= [
-            "Installerad effekt (MW) Totalt",
+            "Installerad effekt (MW)",
             "Installerad effekt per capita (Watt per person)",
-            "Solcellsanläggningar, antal Totalt",
+            "Solcellsanläggningar (Antal)",
         ]
     )
     kartan_amne= {
-         "Installerad effekt (MW) Totalt": df_sol[["Län", "År", "IE"]],
+         "Installerad effekt (MW)": df_sol[["Län", "År", "IE"]],
         "Installerad effekt per capita (Watt per person)": df_sol[["Län", "År", "IEPC"]],
-        "Solcellsanläggningar, antal Totalt": df_sol[["Län", "År", "SCA"]],
+        "Solcellsanläggningar, (Antal)": df_sol[["Län", "År", "SCA"]],
     }
 
     # Replace the strings returned by the multiselectbox by the dataframe in the dict
@@ -356,9 +356,9 @@ if selected == "Karta":
     
     if visa_data_3:
         st.text("""
-        IE: Installerad effekt (MW) Totalt  
-        IEPC: Installerad effect per capita  
-        SCA: Solcellsanläggningar, antal Totalt
+        IE: Installerad effekt (MW)  
+        IEPC: Installerad effect per capita (Watt per person)
+        SCA: Solcellsanläggningar, antal 
         """
         )
         st.write(df_sol)
