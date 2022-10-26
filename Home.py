@@ -33,7 +33,7 @@ with st.sidebar:
     orientation="horizontal",
     key= "1"
     )
-with st.sidebar:
+with st.sidebar (key="2"):
     st.title("Om")
     st.info(
         """
