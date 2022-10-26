@@ -23,7 +23,8 @@ with open("styles/main.css") as f:
     )
 
 # sidebar
-selected = option_menu(
+with st.sidebar:
+    selected = option_menu(
     menu_title=None, 
     options=["Hem", "Statistik", "Karta"], 
     icons=['house', 'sun', "map"], 
@@ -32,9 +33,8 @@ selected = option_menu(
     orientation="horizontal",
     )
     
-with st.sidebar:
-    st.title("Om")
-    st.info(
+    st.sidebar.title("Om")
+    st.sidebar.info(
         """
         This [web app](https://github.com/dahlalex/Solceller) is made by [Alex Dahl](https://dahlalex.github.io/). You can follow me on social media:
             [GitHub](https://github.com/dahlalex) | [LinkedIn](https://www.linkedin.com/in/dahlalex/).
