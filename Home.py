@@ -33,8 +33,8 @@ with st.sidebar:
     orientation="horizontal",
     key= "1"
     )
-    st.sidebar.title("Om")
-    st.sidebar.info(
+with st.sidebar.title("Om")
+     st.sidebar.info(
         """
         This [web app](https://github.com/dahlalex/Solceller) is made by [Alex Dahl](https://dahlalex.github.io/). You can follow me on social media:
             [GitHub](https://github.com/dahlalex) | [LinkedIn](https://www.linkedin.com/in/dahlalex/).
@@ -44,6 +44,8 @@ with st.sidebar:
         Source code: <https://github.com/dahlalex/Solceller>
     """
     )
+    
+    
 
 if selected == "Hem":
     # background for Hemsida
