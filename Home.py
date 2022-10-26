@@ -345,7 +345,7 @@ if selected == "Karta":
     col9, col10 = st.columns(2)
 
     with col9:
-       visa_data_3 = st.checkbox("📋 Visa mer data", key="3")
+       visa_data_3 = st.checkbox("📋 Visa data", key="3")
 
     with col10:
 
