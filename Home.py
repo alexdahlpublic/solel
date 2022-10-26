@@ -30,7 +30,6 @@ with st.sidebar:
     icons=['house', 'sun', "map"], 
     menu_icon="cast", 
     default_index=0, 
-    orientation="horizontal",
     )
     
     st.sidebar.title("Om")
