@@ -23,15 +23,26 @@ with open("styles/main.css") as f:
     )
 
 # sidebar
-with st.sidebar:
-    selected = option_menu(
+selected = option_menu(
     menu_title=None, 
     options=["Hem", "Statistik", "Karta"], 
     icons=['house', 'sun', "map"], 
     menu_icon="cast", 
     default_index=0, 
     orientation="horizontal",
-    key= "1"
+    )
+    
+with st.sidebar:
+    st.title("Om")
+    st.info(
+        """
+        This [web app](https://github.com/dahlalex/Solceller) is made by [Alex Dahl](https://dahlalex.github.io/). You can follow me on social media:
+            [GitHub](https://github.com/dahlalex) | [LinkedIn](https://www.linkedin.com/in/dahlalex/).
+
+        The app is made as an assignment for [Mobila System och GIT](https://www.ocellus.se/mobila-system-och-git).
+        
+        Source code: <https://github.com/dahlalex/Solceller>
+    """
     )
 
     
